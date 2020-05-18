@@ -28,7 +28,6 @@ import com.facebook.ads.AdView;
 import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.*;
 
-import com.flurry.android.FlurryAgent;
 import java.util.Locale;
 import static android.content.Intent.ACTION_VIEW;
 
@@ -74,7 +73,6 @@ public class AprenderChinoHD extends Activity implements OnInitListener {
                 startActivity(new Intent(ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id="+getString(R.string.paquete)) ) );
                 return true;
             case R.id.Salir:
-                FlurryAgent.onEndSession(this);
                 this.finish();
                 return true;
             case R.id.Acerca:
@@ -196,9 +194,6 @@ public class AprenderChinoHD extends Activity implements OnInitListener {
         Intent checkIntent = new Intent();
         checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
         startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
-
-//Id de Flurry	
-        FlurryAgent.onStartSession(this, getString(R.string.flurry));
 
 
 //Lo que hace el bot�n "Hola"

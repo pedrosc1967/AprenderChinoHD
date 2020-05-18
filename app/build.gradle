@@ -7,8 +7,8 @@ android {
         applicationId 'com.aplanetbit.learn.chinese.hd'
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 1
-        versionName '1.0'
+        versionCode 11
+        versionName '1.1'
     }
     buildTypes {
         release {
@@ -21,7 +21,6 @@ android {
 }
 
 dependencies {
-    compile files('libs/FlurryAnalytics_3.3.2.jar')
     implementation 'com.facebook.android:audience-network-sdk:5.+'
-    compile files('libs/AppTracker.jar')
+
 }
